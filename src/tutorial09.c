@@ -132,10 +132,9 @@ int main(void) {
      * has been received via the UART interface.
      */ 
 
-    while (uart_getc() != 'a') {
-        timer_init();
-    }
-
+    while (uart_getc() != 'a') {}
+    timer_init();
+    
 
     //Write your code for Ex 9.4 above this line
 
