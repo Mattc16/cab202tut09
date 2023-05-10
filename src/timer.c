@@ -15,10 +15,10 @@ volatile int aDisplayIndex = 0;
 ISR(TCB0_INT_vect) {
 
     if (aDisplayIndex) {
-        spi_write(0x0C);
+        spi_write(0b01101011);
         aDisplayIndex = 0;
     } else {
-        spi_write(0x7C);
+        spi_write(0b10100000);
         aDisplayIndex = 1;
     }
 
